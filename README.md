@@ -1,4 +1,6 @@
-# Elixir Taiwan's blog
+[![Deploy Hugo site to Pages](https://github.com/codejourneytw/codejourneytw.github.io/actions/workflows/hugo.yaml/badge.svg?branch=main)](https://github.com/codejourneytw/codejourneytw.github.io/actions/workflows/hugo.yaml)
+
+# CodeJourney Taiwan's blog
 
 ## How to Contribute
 
@@ -24,4 +26,4 @@ make server
 ```shell
 make build
 ```
-7. Send a pull request to our repo at [elixirtw/elixirtw.github.io」(https://github.com/elixirtw/elixirtw.github.io)
+7. Send a pull request to our repo at [codejourneytw/codejourneytw.github.io](https://github.com/codejourneytw/codejourneytw.github.io)
