@@ -2,7 +2,6 @@ baseURL = 'https://elixir.tw/'
 languageCode = 'zh-tw'
 title = 'CodeJourney Taiwan'
 theme = 'typo'
-hasCJKLanguage = true
 
 [taxonomies]
 tag = 'tags'
@@ -12,7 +11,7 @@ googleAnalytics = "${GOOGLE_ANALYTICS_ID}"
 
 [params]
 # Meta description
-description = "A Tech Blog of CodeJourney Taiwan"
+description = "CodeJourney Taiwan, A Community for the kid who loves programming"
 
 # Appearance settings
 theme = 'auto'
@@ -38,27 +37,12 @@ listDateFormat = 'Jan 2 2006'
 breadcrumbs = false
 
 # CJK lanugage
+hasCJKLanguage = true
 
 # Social icons
 [[params.social]]
 name = "facebook"
-url = "https://www.facebook.com/groups/elixir.tw"
-
-[[params.social]]
-name = "X"
-url = "https://x.com/elixirtw"
-
-[[params.social]]
-name = "Discord"
-url = "https://discord.com/invite/9zBmPfrrVP"
-
-[[params.social]]
-name = "Meetup"
-url = "https://www.meetup.com/elixirtw-taipei"
-
-[[params.social]]
-name = "Youtube"
-url = "https://www.youtube.com/channel/UCzCRwQKbdBbW9-Vpr--ydZg"
+url = "https://www.facebook.com/codejourneytw"
 
 # Main menu pages
 [[params.menu]]
@@ -106,7 +90,7 @@ reading_speed = 500
 # Giscus comments
 [params.giscus]
 enable = true
-repo = "elixirtw/elixirtw.github.io"
+repo = "codejourneytw/codejourneytw.github.io"
 repoid = "${GISCUS_REPO_ID}"
 category = "Announcements"
 categoryid = "${GISCUS_CATEGORY_ID}"
