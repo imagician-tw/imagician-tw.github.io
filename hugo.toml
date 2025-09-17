@@ -7,7 +7,7 @@ theme = 'typo'
 tag = 'tags'
 
 # Google analytics code
-googleAnalytics = "${GOOGLE_ANALYTICS_ID}"
+# googleAnalytics = "${GOOGLE_ANALYTICS_ID}"
 
 [params]
 # Meta description
@@ -88,12 +88,12 @@ weight = 1
 reading_speed = 500
 
 # Giscus comments
-[params.giscus]
-enable = true
-repo = "codejourneytw/codejourneytw.github.io"
-repoid = "${GISCUS_REPO_ID}"
-category = "Announcements"
-categoryid = "${GISCUS_CATEGORY_ID}"
-mapping = "pathname"
-theme = "preferred_color_scheme"
-datalang = "zh-TW"
+# [params.giscus]
+# enable = true
+# repo = "codejourneytw/codejourneytw.github.io"
+# repoid = "${GISCUS_REPO_ID}"
+# category = "Announcements"
+# categoryid = "${GISCUS_CATEGORY_ID}"
+# mapping = "pathname"
+# theme = "preferred_color_scheme"
+# datalang = "zh-TW"
