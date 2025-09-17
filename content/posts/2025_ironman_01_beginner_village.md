@@ -1,7 +1,7 @@
 ---
-title: "2025 鐵人賽 Ch 0. 把程式碼當做黑盒子，亦或描繪想法的語彙材料？"
-date: "2025-09-15T08:00:00+08:00"
-summary: "2025 iTHelp 鐵人賽的系列文章的前言"
+title: "2025 鐵人賽 Ch 1. 在新手村的第一步當然是找武器哇"
+date: "2025-09-16T08:00:00+08:00"
+summary: "2025 iTHelp 鐵人賽的系列文章的第一篇"
 authorId: "taiansu"
 authorName: "Tai An Su"
 readTime: true
