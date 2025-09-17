@@ -10,9 +10,6 @@ showTags: true
 hideBackToTop: false
 ---
 
-<meta property="og:title" content="給新手們的程式設計世界觀: Ch 1. 在新手村的第一步當然是找武器哇" />
-<meta property="og:image" content="https://i.postimg.cc/rsGbdyCd/day1-2.jpg" />
-
 歡迎！在開始之前，想問一下，當我們提到「程式」這兩個字時，你心裡想到的是什麼呢？就算你是被爸媽逼著看這本書的而心情不太好，也可以試著回答看看。在很多人的心中，應該類似像下面這樣：
 
 ![](https://i.postimg.cc/50CDVSXS/day1-1.png)

@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/zh/</loc>
+    <loc>https://codejourney.tw/zh/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/"
+                href="https://codejourney.tw/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-TW"
-                href="http://localhost:1313/zh/"
+                href="https://codejourney.tw/zh/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/google_analytics_id/</loc>
+    <loc>https://codejourney.tw/zh/google_analytics_id/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/google_analytics_id/"
+                href="https://codejourney.tw/google_analytics_id/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-TW"
-                href="http://localhost:1313/zh/google_analytics_id/"
+                href="https://codejourney.tw/zh/google_analytics_id/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/tags/</loc>
+    <loc>https://codejourney.tw/zh/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/tags/"
+                href="https://codejourney.tw/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-TW"
-                href="http://localhost:1313/zh/tags/"
+                href="https://codejourney.tw/zh/tags/"
                 />
   </url>
 </urlset>
