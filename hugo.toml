@@ -1,4 +1,4 @@
-baseURL = 'https://elixir.tw/'
+baseURL = 'https://codejourney.tw/'
 languageCode = 'zh-tw'
 title = 'CodeJourney Taiwan'
 theme = 'typo'
