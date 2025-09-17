@@ -1,37 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on CodeJourney Taiwan</title><link>https://codejourney.tw/</link><description>Recent content in Home on CodeJourney Taiwan</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Tue, 16 Sep 2025 08:00:00 +0800</lastBuildDate><atom:link href="https://codejourney.tw/index.xml" rel="self" type="application/rss+xml"/><item><title>2025 鐵人賽 Ch 1. 在新手村的第一步當然是找武器哇</title><link>https://codejourney.tw/posts/2025_ironman_01_beginner_village/</link><pubDate>Tue, 16 Sep 2025 08:00:00 +0800</pubDate><guid>https://codejourney.tw/posts/2025_ironman_01_beginner_village/</guid><description>2025 iTHelp 鐵人賽的系列文章的第一篇</description></item><item><title>2025 鐵人賽 Ch 0. 把程式碼當做黑盒子，亦或描繪想法的語彙材料？</title><link>https://codejourney.tw/posts/2025_ironman_00_prelude/</link><pubDate>Mon, 15 Sep 2025 08:00:00 +0800</pubDate><guid>https://codejourney.tw/posts/2025_ironman_00_prelude/</guid><description>2025 iTHelp 鐵人賽的系列文章的前言</description></item><item><title>學習資源</title><link>https://codejourney.tw/resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://codejourney.tw/resources/</guid><description/></item><item><title>每月小聚</title><link>https://codejourney.tw/meetup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://codejourney.tw/meetup/</guid><description>&lt;ul&gt;
-&lt;li&gt;時間：每個月的最後一個週六 *&lt;/li&gt;
-&lt;li&gt;地點：&lt;a href="https://www.facebook.com/5xruby"&gt;五倍學院&lt;/a&gt; *&lt;/li&gt;
-&lt;li&gt;費用：場地的飲料費用&lt;/li&gt;
-&lt;li&gt;報名：請在 &lt;a href="https://www.facebook.com/codejourneytw"&gt;Facebook&lt;/a&gt; 當月舉辦的活動報名&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;* 地點或日期有可能因場地或主辦情況異動，請至 &lt;a href="https://www.facebook.com/codejourneytw"&gt;facebook&lt;/a&gt; 確認&lt;/p&gt;
-&lt;h3 class="heading" id="基本規則沒有笨問題--互動交流"&gt;
- 基本規則：沒有笨問題 + 互動交流
- &lt;a href="#%e5%9f%ba%e6%9c%ac%e8%a6%8f%e5%89%87%e6%b2%92%e6%9c%89%e7%ac%a8%e5%95%8f%e9%a1%8c--%e4%ba%92%e5%8b%95%e4%ba%a4%e6%b5%81"&gt;#&lt;/a&gt;
-&lt;/h3&gt;
-&lt;h3 class="heading" id="建議"&gt;
- 建議
- &lt;a href="#%e5%bb%ba%e8%ad%b0"&gt;#&lt;/a&gt;
-&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;家長帶一台能讓孩子操作的簡單的筆電或是 iPad，會比較容易參與討論。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 class="heading" id="聚會流程"&gt;
- 聚會流程
- &lt;a href="#%e8%81%9a%e6%9c%83%e6%b5%81%e7%a8%8b"&gt;#&lt;/a&gt;
-&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;主辦介紹及規則說明&lt;/li&gt;
-&lt;li&gt;每個孩子自我介紹，並聊一下自己有興趣或目前在進行/嘗試的東西。然後每個人預留五分鐘讓大家問問題。&lt;/li&gt;
-&lt;li&gt;家長如果想講話的話同上。&lt;/li&gt;
-&lt;li&gt;我們會將2跟3的題目寫在黑板上並整合，在所有人發表結束後讓大家投想要後續參與討論的主題。&lt;/li&gt;
-&lt;li&gt;可自由報名的短講。3~15分鐘。&lt;/li&gt;
-&lt;li&gt;依第4步的主題分組討論。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;主題的話，只要跟程式有關都可以，例如程式教學心得, AI 輔助, scratch, minecraft edu, &amp;ldquo;switch 的第一次的遊戲程式設計&amp;rdquo; 都算。
-這個一個開源社群精神的活動，只有活動場地清潔費&lt;/p&gt;
-&lt;h3 class="heading" id="講者募集"&gt;
- 講者募集
- &lt;a href="#%e8%ac%9b%e8%80%85%e5%8b%9f%e9%9b%86"&gt;#&lt;/a&gt;
-&lt;/h3&gt;
-&lt;p&gt;如果你有想要分享的議題，不管是最近玩到一半的小東西，或是在學習上遇的關卡想發表，都歡迎你跟主辦單位連絡。如果你有想要瞭解的主題，也可以在社群媒體上跟大家許願。&lt;/p&gt;</description></item><item><title>關於我們</title><link>https://codejourney.tw/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://codejourney.tw/about/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on CodeJourney Taiwan</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Home on CodeJourney Taiwan</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 16 Sep 2025 08:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025 鐵人賽 Ch 1. 在新手村的第一步當然是找武器哇</title>
+      <link>http://localhost:1313/posts/2025_ironman_01_beginner_village/</link>
+      <pubDate>Tue, 16 Sep 2025 08:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025_ironman_01_beginner_village/</guid>
+      <description>2025 iTHelp 鐵人賽的系列文章的第一篇</description>
+    </item>
+    <item>
+      <title>2025 鐵人賽 Ch 0. 把程式碼當做黑盒子，亦或描繪想法的語彙材料？</title>
+      <link>http://localhost:1313/posts/2025_ironman_00_prelude/</link>
+      <pubDate>Mon, 15 Sep 2025 08:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025_ironman_00_prelude/</guid>
+      <description>2025 iTHelp 鐵人賽的系列文章的前言</description>
+    </item>
+    <item>
+      <title>學習資源</title>
+      <link>http://localhost:1313/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>每月小聚</title>
+      <link>http://localhost:1313/meetup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/meetup/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;時間：每個月的最後一個週六 *&lt;/li&gt;&#xA;&lt;li&gt;地點：&lt;a href=&#34;https://www.facebook.com/5xruby&#34;&gt;五倍學院&lt;/a&gt; *&lt;/li&gt;&#xA;&lt;li&gt;費用：場地的飲料費用&lt;/li&gt;&#xA;&lt;li&gt;報名：請在 &lt;a href=&#34;https://www.facebook.com/codejourneytw&#34;&gt;Facebook&lt;/a&gt; 當月舉辦的活動報名&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;* 地點或日期有可能因場地或主辦情況異動，請至 &lt;a href=&#34;https://www.facebook.com/codejourneytw&#34;&gt;facebook&lt;/a&gt; 確認&lt;/p&gt;&#xA;&lt;h3 class=&#34;heading&#34; id=&#34;基本規則沒有笨問題--互動交流&#34;&gt;&#xA;  基本規則：沒有笨問題 + 互動交流&#xA;  &lt;a href=&#34;#%e5%9f%ba%e6%9c%ac%e8%a6%8f%e5%89%87%e6%b2%92%e6%9c%89%e7%ac%a8%e5%95%8f%e9%a1%8c--%e4%ba%92%e5%8b%95%e4%ba%a4%e6%b5%81&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;h3 class=&#34;heading&#34; id=&#34;建議&#34;&gt;&#xA;  建議&#xA;  &lt;a href=&#34;#%e5%bb%ba%e8%ad%b0&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;家長帶一台能讓孩子操作的簡單的筆電或是 iPad，會比較容易參與討論。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 class=&#34;heading&#34; id=&#34;聚會流程&#34;&gt;&#xA;  聚會流程&#xA;  &lt;a href=&#34;#%e8%81%9a%e6%9c%83%e6%b5%81%e7%a8%8b&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;主辦介紹及規則說明&lt;/li&gt;&#xA;&lt;li&gt;每個孩子自我介紹，並聊一下自己有興趣或目前在進行/嘗試的東西。然後每個人預留五分鐘讓大家問問題。&lt;/li&gt;&#xA;&lt;li&gt;家長如果想講話的話同上。&lt;/li&gt;&#xA;&lt;li&gt;我們會將2跟3的題目寫在黑板上並整合，在所有人發表結束後讓大家投想要後續參與討論的主題。&lt;/li&gt;&#xA;&lt;li&gt;可自由報名的短講。3~15分鐘。&lt;/li&gt;&#xA;&lt;li&gt;依第4步的主題分組討論。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;主題的話，只要跟程式有關都可以，例如程式教學心得, AI 輔助, scratch, minecraft edu, &amp;ldquo;switch 的第一次的遊戲程式設計&amp;rdquo; 都算。&#xA;這個一個開源社群精神的活動，只有活動場地清潔費&lt;/p&gt;&#xA;&lt;h3 class=&#34;heading&#34; id=&#34;講者募集&#34;&gt;&#xA;  講者募集&#xA;  &lt;a href=&#34;#%e8%ac%9b%e8%80%85%e5%8b%9f%e9%9b%86&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;如果你有想要分享的議題，不管是最近玩到一半的小東西，或是在學習上遇的關卡想發表，都歡迎你跟主辦單位連絡。如果你有想要瞭解的主題，也可以在社群媒體上跟大家許願。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>關於我們</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
