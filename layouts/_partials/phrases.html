@@ -1,0 +1,6 @@
+{{- /* Wrap each "，"-delimited clause in a no-break span so lines only wrap at commas. */ -}}
+{{- $parts := split . "，" -}}
+{{- $last := sub (len $parts) 1 -}}
+{{- range $i, $p := $parts -}}
+<span class="im-phrase">{{ $p }}{{ if lt $i $last }}，{{ end }}</span>
+{{- end -}}

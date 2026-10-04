@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #fbfbf9; }
+    .ring { fill: none; stroke: #c9c9c1; stroke-width: 2; }
+    .arc { fill: none; stroke: #3346c9; stroke-width: 4; stroke-linecap: round; }
+    .i { fill: #111114; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #111114; }
+      .ring { stroke: #3a3a42; }
+      .arc { stroke: #8c9bff; }
+      .i { fill: #ededf0; }
+    }
+  </style>
+  <circle class="bg" cx="32" cy="32" r="32"/>
+  <circle class="ring" cx="32" cy="32" r="26"/>
+  <path class="arc" d="M10.5 22.5 A26 26 0 0 1 49 12.3"/>
+  <circle class="i" cx="32" cy="20" r="4"/>
+  <rect class="i" x="28.5" y="27" width="7" height="20" rx="1.5"/>
+</svg>

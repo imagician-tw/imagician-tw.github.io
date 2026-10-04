@@ -1,0 +1,62 @@
+{{- define "main" }}
+<div class="im-stage">
+<div class="im-rings" aria-hidden="true">
+  <span class="im-ring im-ring--outer"></span>
+  <span class="im-ring im-ring--dashed"></span>
+  <span class="im-ring im-ring--accent"></span>
+  <span class="im-ring im-ring--small"></span>
+</div>
+
+<section class="im-hero" aria-labelledby="im-hero-title">
+  <div class="im-hero__body">
+    {{- with .Params.eyebrow }}<p class="im-eyebrow">{{ . }}</p>{{ end }}
+    <h1 id="im-hero-title" class="im-title">imagician</h1>
+    {{- with .Params.subtitle }}<p class="im-subtitle">{{ . }}</p>{{ end }}
+    <div class="im-copy">
+      {{- with .Params.tagline }}<p class="im-tagline">{{ partial "phrases.html" . }}</p>{{ end }}
+      {{- with .Params.intro }}
+      <div class="im-intro">
+        {{- range . }}<p>{{ partial "phrases.html" . }}</p>{{ end }}
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{- with .Params.entries }}
+<nav class="im-index" aria-label="網站導覽">
+  <ol>
+    {{- range $i, $e := . }}
+    <li>
+      <a href="{{ $e.url | relLangURL }}">
+        <span class="im-index__num">{{ printf "%02d" (add $i 1) }}</span>
+        <span class="im-index__text">
+          <span class="im-index__title">{{ $e.title }}</span>
+          <span class="im-index__desc">{{ $e.description }}</span>
+        </span>
+        <span class="im-index__arrow" aria-hidden="true">→</span>
+      </a>
+    </li>
+    {{- end }}
+  </ol>
+</nav>
+{{- end }}
+</div>
+
+{{- $posts := first 5 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+{{- with $posts }}
+<section class="im-latest" aria-labelledby="im-latest-title">
+  <h2 id="im-latest-title" class="im-eyebrow">最新文章</h2>
+  <ul>
+    {{- range . }}
+    <li>
+      <a href="{{ .RelPermalink }}">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+        <span>{{ .Title }}</span>
+      </a>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+{{- end }}

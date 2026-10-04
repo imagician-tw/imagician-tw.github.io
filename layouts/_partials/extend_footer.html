@@ -1,0 +1,35 @@
+{{- /* Mobile: collapse the main menu into a toggle button at the top right. Without JS the menu stays visible. */ -}}
+<script>
+(() => {
+  const nav = document.querySelector(".header-nav");
+  const menu = document.getElementById("menu");
+  if (!nav || !menu) return;
+
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "im-menu-toggle";
+  button.setAttribute("aria-controls", "menu");
+  button.setAttribute("aria-expanded", "false");
+  button.setAttribute("aria-label", "開啟選單");
+  button.innerHTML =
+    '<svg class="im-menu-toggle__open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>' +
+    '<svg class="im-menu-toggle__close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+  nav.insertBefore(button, menu);
+
+  const setOpen = (open) => {
+    nav.classList.toggle("im-menu-open", open);
+    button.setAttribute("aria-expanded", String(open));
+    button.setAttribute("aria-label", open ? "關閉選單" : "開啟選單");
+  };
+
+  button.addEventListener("click", () => setOpen(!nav.classList.contains("im-menu-open")));
+  menu.addEventListener("click", (e) => { if (e.target.closest("a")) setOpen(false); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && nav.classList.contains("im-menu-open")) {
+      setOpen(false);
+      button.focus();
+    }
+  });
+  document.addEventListener("click", (e) => { if (!nav.contains(e.target)) setOpen(false); });
+})();
+</script>

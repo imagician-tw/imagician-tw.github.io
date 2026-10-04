@@ -1,13 +1,9 @@
 ---
 title: "2025 鐵人賽 Ch 1. 在新手村的第一步當然是找武器哇"
 date: "2025-09-16T08:00:00+08:00"
-summary: "2025 iTHelp 鐵人賽的系列文章的第一篇"
-authorId: "taiansu"
-authorName: "Tai An Su"
-readTime: true
+author: "Tai An Su"
+authorLink: "https://github.com/taiansu"
 tags: ["鐵人賽", "程式新手", "程式教育", "親子", "小學生"]
-showTags: true
-hideBackToTop: false
 ---
 
 歡迎！在開始之前，想問一下，當我們提到「程式」這兩個字時，你心裡想到的是什麼呢？就算你是被爸媽逼著看這本書的而心情不太好，也可以試著回答看看。在很多人的心中，應該類似像下面這樣：

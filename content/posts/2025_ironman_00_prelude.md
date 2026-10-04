@@ -1,13 +1,9 @@
 ---
 title: "2025 鐵人賽 Ch 0. 把程式碼當做黑盒子，亦或描繪想法的語彙材料？"
 date: "2025-09-15T08:00:00+08:00"
-summary: "2025 iTHelp 鐵人賽的系列文章的前言"
-authorId: "taiansu"
-authorName: "Tai An Su"
-readTime: true
+author: "Tai An Su"
+authorLink: "https://github.com/taiansu"
 tags: ["鐵人賽", "程式新手", "程式教育", "親子", "小學生"]
-showTags: true
-hideBackToTop: false
 ---
 
 這是我們參加 2025 iTHelp 鐵人賽的系列文章。同步發表在這裡。如果之後有機會的話，可以出成紙本與電子書。這篇是前言，正文下一篇才開始。
