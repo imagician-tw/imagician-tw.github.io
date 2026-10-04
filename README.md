@@ -1,4 +1,4 @@
-[![Deploy Hugo site to Pages](https://github.com/codejourneytw/codejourneytw.github.io/actions/workflows/hugo.yaml/badge.svg?branch=main)](https://github.com/codejourneytw/codejourneytw.github.io/actions/workflows/hugo.yaml)
+[![Deploy Hugo site to Pages](https://github.com/imagician-tw/imagician-tw.github.io/actions/workflows/hugo.yaml/badge.svg?branch=main)](https://github.com/imagician-tw/imagician-tw.github.io/actions/workflows/hugo.yaml)
 
 # imagician 創想符碼
 
@@ -25,7 +25,7 @@
 
 ```shell
 brew install hugo
-git clone --recurse-submodules git@github.com:codejourneytw/codejourneytw.github.io.git
+git clone --recurse-submodules git@github.com:imagician-tw/imagician-tw.github.io.git
 # 已 clone 過：git submodule update --init
 ```
 
@@ -44,7 +44,7 @@ git clone --recurse-submodules git@github.com:codejourneytw/codejourneytw.github
    ```shell
    make build
    ```
-5. 發 pull request 到 [codejourneytw/codejourneytw.github.io](https://github.com/codejourneytw/codejourneytw.github.io)。推上 `main` 後由 GitHub Actions 部署到 GitHub Pages。
+5. 發 pull request 到 [imagician-tw/imagician-tw.github.io](https://github.com/imagician-tw/imagician-tw.github.io)。推上 `main` 後由 GitHub Actions 部署到 GitHub Pages。
 
 ### 更新 PaperMod
 
