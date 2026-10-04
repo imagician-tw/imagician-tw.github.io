@@ -2,7 +2,7 @@
 
 # imagician 創想符碼
 
-[imagician.tw](https://imagician.tw/) 的原始碼：創想符碼 imagician 官方網站與部落格，並收錄 CodeJourney Taiwan 社群頁面。
+[imagician.tw](https://imagician.tw/) 的原始碼：創想符碼 imagician 官方網站與部落格，並收錄 imagician Taiwan 社群頁面。
 
 使用 [Hugo](https://gohugo.io/)（≥ 0.146）與 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme（git submodule，位於 `themes/PaperMod`）。
 
@@ -10,7 +10,7 @@
 
 - `content/_index.md`：首頁文案（標語、導覽項目）。
 - `content/posts/`：文章。
-- `content/community/`：CodeJourney Taiwan 社群頁面；舊網址 `/about/`、`/meetup/`、`/resources/` 以 `aliases` 轉到這裡。
+- `content/community/`：imagician Taiwan 社群頁面；舊網址 `/about/`、`/meetup/`、`/resources/` 以 `aliases` 轉到這裡。
 - `layouts/home.html`：首頁版型（含圓線動畫）。
 - `assets/css/extended/imagician.css`：配色、襯線標題與首頁樣式。
 - `static/images/og-image.png`：Facebook／X 分享卡片共用縮圖（1200×630）。

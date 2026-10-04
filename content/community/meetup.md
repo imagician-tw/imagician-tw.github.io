@@ -9,9 +9,9 @@ hideMeta: true
 - 時間：每個月的最後一個週六 \*
 - 地點：[五倍學院](https://www.facebook.com/5xruby) \*
 - 費用：場地的飲料費用
-- 報名：請在 [Facebook](https://www.facebook.com/codejourneytw) 當月舉辦的活動報名
+- 報名：請在 [Facebook 粉專「熊熊程式寫不出來」](https://www.facebook.com/imagiciantw)當月舉辦的活動報名
 
-\* 地點或日期有可能因場地或主辦情況異動，請至 [facebook](https://www.facebook.com/codejourneytw) 確認
+\* 地點或日期有可能因場地或主辦情況異動，請至 [Facebook](https://www.facebook.com/imagiciantw) 確認
 
 ### 基本規則：沒有笨問題 + 互動交流
 

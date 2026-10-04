@@ -12,6 +12,6 @@ entries:
     description: "程式與 AI 的學習筆記、系列文"
     url: "/posts/"
   - title: "社群"
-    description: "CodeJourney Taiwan 每月小聚與學習資源"
+    description: "imagician Taiwan 每月小聚與學習資源"
     url: "/community/"
 ---
