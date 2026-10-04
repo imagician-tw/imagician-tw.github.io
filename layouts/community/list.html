@@ -1,0 +1,30 @@
+{{- /* Community section: like PaperMod's list, but entry summaries keep their Markdown formatting (lists, links, strikethrough). */ -}}
+{{- define "main" }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . | markdownify }}</div>
+  {{- end }}
+</header>
+
+{{- with .Content }}
+<div class="post-content md-content">{{ . }}</div>
+{{- end }}
+
+{{- range .RegularPages.ByWeight }}
+<article class="post-entry im-community-entry">
+  <header class="entry-header">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  </header>
+  {{- if .Content }}
+  <div class="im-community-entry__summary md-content">
+    {{ .Summary }}
+    {{- if .Truncated }}
+    <p class="im-community-entry__more"><a href="{{ .RelPermalink }}">完整說明 →</a></p>
+    {{- end }}
+  </div>
+  {{- end }}
+</article>
+{{- end }}
+{{- end }}
