@@ -29,7 +29,20 @@ ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
 ShowShareButtons = true
-ShareButtons = ['facebook', 'x', 'linkedin']
+[[params.communityLinks]]
+name = 'Facebook'
+icon = 'facebook'
+url = 'https://www.facebook.com/imagiciantw'
+
+[[params.communityLinks]]
+name = 'X'
+icon = 'x'
+url = ''
+
+[[params.communityLinks]]
+name = 'Luma'
+url = 'https://lu.ma/imagiciantw'
+
 
 [params.label]
 text = 'imagician.tw'

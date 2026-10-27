@@ -32,6 +32,20 @@
 
 body {
     overflow-x: clip;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    margin: 0 auto;
+}
+
+.footer {
+    order: 2;
 }
 
 .list,
@@ -80,6 +94,8 @@ a:hover .entry-header h2,
     transition: none;
 }
 
+.post-entry:hover,
+.post-entry:focus-within,
 .post-entry:active {
     transform: none;
 }
@@ -455,4 +471,50 @@ a:hover .entry-header h2,
     .im-hero__body {
         animation: none;
     }
+}
+
+/* Community destinations and article sharing are separate, quiet text links. */
+.im-community-links,
+.im-share {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    color: var(--secondary);
+    font-size: 0.875rem;
+}
+
+.im-community-links {
+    justify-content: center;
+    order: 1;
+    padding: 0 var(--gap);
+}
+
+.im-community-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    min-height: 44px;
+}
+
+.im-community-links svg {
+    width: 18px;
+    height: 18px;
+}
+
+.im-share {
+    margin-top: 1.5rem;
+}
+
+.im-share a {
+    padding-block: 0.625rem;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.im-community-links a:hover,
+.im-community-links a:focus-visible,
+.im-share a:hover,
+.im-share a:focus-visible {
+    color: var(--accent);
 }
