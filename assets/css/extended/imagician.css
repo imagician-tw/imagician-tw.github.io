@@ -130,34 +130,32 @@ a:hover .entry-header h2,
 
 /* ---- Home ---- */
 .im-stage {
-    --im-hero-h: min(70vh, 700px);
+    --im-hero-h: clamp(340px, 50vh, 500px);
+    --im-orbit-size: min(100vmin, 900px);
+    --im-orbit-gap: clamp(16px, 2.5vw, 40px);
+    min-height: calc((var(--im-hero-h) + var(--im-orbit-size)) / 2 - var(--gap) + var(--im-orbit-gap));
     position: relative;
-    padding-bottom: 3rem;
+    margin-top: calc(1.5rem + 20px);
+    padding-bottom: var(--im-orbit-gap);
 }
 
-/* Desktop: keep the animated accent ring (62vmin) clear of the header; other rings may crop. */
-@media (min-width: 601px) {
-    .im-stage {
-        --im-hero-h: max(min(70vh, 700px), calc(62vmin + 6rem));
-    }
-}
 
-/* Rings span hero and index; the glass index rows sit on top of them. */
+/* Keep the animated rings behind the hero, separate from the learning content. */
 .im-rings {
     position: absolute;
     top: calc(var(--gap) * -1);
-    bottom: 0;
-    left: calc(50% - 50vw);
-    width: 100vw;
+    bottom: var(--im-orbit-gap);
+    left: 50%;
+    width: min(1040px, 100vw);
+    transform: translateX(-50%);
     overflow: hidden;
     pointer-events: none;
-    -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
-    mask-image: linear-gradient(to bottom, #000 70%, transparent);
 }
 
 .im-ring {
     position: absolute;
-    top: calc(var(--im-hero-h) / 2);
+    /* Anchor every concentric ring to the outer circle's bottom edge. */
+    top: calc(100% - var(--im-orbit-size) / 2);
     left: 50%;
     translate: -50% -50%;
     border: 1px solid var(--ring);
@@ -174,42 +172,37 @@ a:hover .entry-header h2,
     text-align: center;
 }
 
+.im-ring--outer,
+.im-ring--accent {
+    width: var(--im-orbit-size);
+    height: var(--im-orbit-size);
+}
+
 .im-ring--outer {
-    width: 140vmin;
-    height: 140vmin;
     animation-duration: 90s;
 }
 
 .im-ring--dashed {
-    width: 96vmin;
-    height: 96vmin;
+    width: min(72vmin, 680px);
+    height: min(72vmin, 680px);
     border-style: dashed;
 }
 
 .im-ring--accent {
-    width: 62vmin;
-    height: 62vmin;
     border-width: 2px;
     border-color: transparent;
-    border-top-color: var(--accent);
+    border-bottom-color: var(--accent);
     animation-direction: reverse;
 }
 
-/* Phones: the inner circle would cut through the title; orbit the dashed middle ring instead. */
-@media (max-width: 600px) {
-    .im-ring--accent {
-        width: 96vmin;
-        height: 96vmin;
-    }
-}
 
 .im-ring--small {
     top: calc(var(--im-hero-h) * 0.14);
     left: auto;
-    right: 8%;
+    right: 18%;
     translate: none;
-    width: 20vmin;
-    height: 20vmin;
+    width: min(14vmin, 120px);
+    height: min(14vmin, 120px);
     animation: none;
 }
 
@@ -238,6 +231,10 @@ a:hover .entry-header h2,
     font-weight: 500;
     letter-spacing: 0.32em;
     color: var(--secondary);
+}
+
+.im-hero .im-eyebrow {
+    margin-bottom: 2rem;
 }
 
 .im-title {
@@ -284,21 +281,87 @@ a:hover .entry-header h2,
     color: var(--content);
 }
 
-.im-intro {
-    margin: 1.75rem auto 0;
-    font-size: 0.95rem;
-    text-align: center;
-    line-height: 2;
-    color: var(--secondary);
-}
-
-.im-intro p {
-    margin: 0;
-}
 
 /* Clauses never split; lines wrap only after "，". */
 .im-phrase {
     display: inline-block;
+}
+
+
+.im-philosophy {
+    position: relative;
+    left: 50%;
+    width: min(1120px, calc(100vw - var(--gap) * 2));
+    transform: translateX(-50%);
+    padding: 0 0 2rem;
+}
+
+.im-hero__intro {
+    margin-top: 1.25rem;
+    font-size: calc(0.95rem * var(--im-font-scale, 1) - 4px);
+    line-height: 1.8;
+    text-align: center;
+    color: var(--content);
+}
+
+.im-hero__intro p {
+    margin: 0;
+}
+
+.im-hero__intro p + p {
+    margin-top: 0.5rem;
+}
+
+.im-philosophy__grid {
+    display: grid;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.im-philosophy__item {
+    min-width: 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+}
+
+.im-philosophy__icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+
+.im-philosophy__subtitle {
+    margin: 0 0 1rem;
+    font-size: calc(1rem * var(--im-font-scale, 1));
+    color: var(--primary);
+}
+
+.im-philosophy__description {
+    margin: 0;
+    font-size: calc(0.95rem * var(--im-font-scale, 1));
+    line-height: 1.8;
+    color: var(--secondary);
+}
+
+@media (min-width: 1100px) {
+    .im-stage {
+        --im-orbit-gap: calc(clamp(16px, 2.5vw, 40px) + 5px);
+    }
+
+    .im-philosophy__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1099px) {
+    .im-philosophy {
+        width: 100%;
+    }
 }
 
 .im-index ol,
@@ -310,6 +373,7 @@ a:hover .entry-header h2,
 
 .im-index {
     position: relative;
+    margin: 2rem 0 3rem;
 }
 
 .im-index li + li {
@@ -517,4 +581,137 @@ a:hover .entry-header h2,
 .im-share a:hover,
 .im-share a:focus-visible {
     color: var(--accent);
+}
+
+/* Scale explicit font sizes only; em-based text inherits the increase once.
+   Keep PaperMod overrides here so theme updates do not overwrite site typography. */
+@media (min-width: 601px) {
+    :root {
+        --im-font-scale: 1.5;
+    }
+
+    body {
+        font-size: calc(18px * var(--im-font-scale));
+    }
+
+    .footer,
+    .top-link,
+    .md-content h6 {
+        font-size: calc(12px * var(--im-font-scale));
+    }
+
+    .pagination a,
+    .entry-footer {
+        font-size: calc(13px * var(--im-font-scale));
+    }
+
+    .archive-count,
+    .archive-meta,
+    .copy-code,
+    .md-content h5,
+    .md-content figure > figcaption > p,
+    .first-entry .entry-footer,
+    .entry-content,
+    .entry-cover,
+    .post-meta,
+    .breadcrumbs,
+    .post-tags a {
+        font-size: calc(14px * var(--im-font-scale));
+    }
+
+    .archive-posts,
+    .menu a,
+    .md-content h4,
+    .md-content figure > figcaption,
+    .first-entry .entry-content,
+    .breadcrumbs a {
+        font-size: calc(16px * var(--im-font-scale));
+    }
+
+    .logo a,
+    .md-content h3,
+    .entry-header h2 {
+        font-size: calc(24px * var(--im-font-scale));
+    }
+
+    .md-content h2 {
+        font-size: calc(32px * var(--im-font-scale));
+    }
+
+    .first-entry .entry-header h1 {
+        font-size: calc(34px * var(--im-font-scale));
+    }
+
+    .md-content h1,
+    .first-entry .entry-header h2 {
+        font-size: calc(40px * var(--im-font-scale));
+    }
+
+    .not-found {
+        font-size: calc(160px * var(--im-font-scale));
+    }
+
+    .page-header h1,
+    .post-title {
+        font-size: calc(clamp(2rem, 5vw, 2.75rem) * var(--im-font-scale));
+    }
+
+    .im-hero__body {
+        min-width: 0;
+    }
+
+    .im-title {
+        font-size: calc(clamp(3rem, 10vw, 6rem) * var(--im-font-scale));
+        /* Let the wordmark exceed the text column without splitting the name. */
+        width: max-content;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .im-subtitle {
+        font-size: calc(clamp(1.4rem, 3.6vw, 1.9rem) * var(--im-font-scale));
+    }
+
+    .im-eyebrow {
+        font-size: calc(0.75rem * var(--im-font-scale));
+    }
+
+    .paginav .title {
+        font-size: calc(0.8rem * var(--im-font-scale));
+    }
+
+    .im-latest time {
+        font-size: calc(0.85rem * var(--im-font-scale));
+    }
+
+    .im-community-links,
+    .im-share {
+        font-size: calc(0.875rem * var(--im-font-scale));
+    }
+
+    .im-community-entry__more,
+    .im-index__desc {
+        font-size: calc(0.9rem * var(--im-font-scale));
+    }
+
+    .im-community-entry__summary {
+        font-size: calc(0.95rem * var(--im-font-scale));
+    }
+
+    .lang-menu a {
+        font-size: calc(1rem * var(--im-font-scale));
+    }
+
+    .im-tagline {
+        font-size: calc(1.05rem * var(--im-font-scale));
+    }
+
+    .im-index__title {
+        font-size: calc(1.3rem * var(--im-font-scale));
+    }
+
+    .im-index__num {
+        font-size: calc(1.4rem * var(--im-font-scale));
+    }
 }

@@ -8,12 +8,26 @@
 
 ## 結構
 
-- `content/_index.md`：首頁文案（標語、導覽項目）。
+- `content/_index.md`：首頁文案（標語、三項教學理念、社群與學習資源入口）。
 - `content/posts/`：文章。
 - `content/community/`：imagician Taiwan 社群頁面；舊網址 `/about/`、`/meetup/`、`/resources/` 以 `aliases` 轉到這裡。
 - `layouts/home.html`：首頁版型（含圓線動畫）。
 - `assets/css/extended/imagician.css`：配色、襯線標題與首頁樣式；列表在 hover／鍵盤聚焦時維持位置不動，保留連結變色。
 - `static/images/og-image.png`：Facebook／X 分享卡片共用縮圖（1200×630）。
+
+## 首頁教學理念
+
+首頁主視覺在「懂得如何想像，就能學會施展魔法」下方呈現兩句理念引言，與標語相隔 1.25rem；引言字級為原設定減少 4px（桌機 18.8px、手機 11.2px）。三組圖示、短句與說明獨立呈現於主視覺下方，不另設「教學理念」標籤或三項中標。文字維護於 `content/_index.md` 的 `philosophy.intro` 與 `philosophy.items`；線條圖示由 `layouts/home.html` 繪製，僅作裝飾，不作為連結。
+
+理念區最大寬度為 1120px，視窗寬度 ≥ 1100px 時呈現三欄，其餘為單欄；不改變一般文章的閱讀寬度。下方保留社群與學習資源入口，並明示實體小聚暫停中。這版尚未加入課程介紹或報名入口。
+
+主視覺最低高度隨視窗調整於 340–500px，並依大圓底緣預留空間。大圓與藍色旋轉線共用 `--im-orbit-size: min(100vmin, 900px)`，藍線沿大圓邊界旋轉；大圓底緣與下方理念區塊的間距以 `clamp(16px, 2.5vw, 40px)` 隨視窗調整，桌機三欄版（≥ 1100px）再增加 5px，統一由 `--im-orbit-gap` 控制，不以裁切或淡出隱藏底緣。品牌區上方留白為 `calc(1.5rem + 20px)`，使品牌區及後續內容整體下移 20px，頂端導覽列不動；「程式與 AI 教育」與大標題間隔 2rem，兩句引言相隔 0.5rem。短句與說明使用內文字型。
+
+## 字級
+
+桌機版（視窗寬度 ≥ 601px）所有字級統一放大 50%（原始大小的 1.5 倍），手機版（≤ 600px）維持原大小。縮放設定集中在 `assets/css/extended/imagician.css` 的桌機字級區塊，由 `--im-font-scale: 1.5` 控制；僅調整字級，不縮放頁面或間距。首頁英文標題可超出內文欄寬並保持置中，避免放大後拆字換行。
+
+PaperMod 的固定字級在此覆寫，不直接修改 theme submodule。新增 `px`、`rem` 或 `clamp()` 字級時，需同步加入桌機縮放規則；`em` 字級會隨父層放大，不需重複套用倍率。
 
 ## 分享卡片
 

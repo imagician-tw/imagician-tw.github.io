@@ -14,17 +14,46 @@
     {{- with .Params.subtitle }}<p class="im-subtitle">{{ . }}</p>{{ end }}
     <div class="im-copy">
       {{- with .Params.tagline }}<p class="im-tagline">{{ partial "phrases.html" . }}</p>{{ end }}
-      {{- with .Params.intro }}
-      <div class="im-intro">
-        {{- range . }}<p>{{ partial "phrases.html" . }}</p>{{ end }}
+      {{- with .Params.philosophy.intro }}
+      <div id="im-philosophy-title" class="im-hero__intro">
+        {{- range . }}
+        <p>{{ partial "phrases.html" . }}</p>
+        {{- end }}
       </div>
       {{- end }}
     </div>
   </div>
 </section>
+</div>
+
+{{- with .Params.philosophy }}
+<section class="im-philosophy" aria-label="我們的學習方式">
+  <ul class="im-philosophy__grid">
+    {{- range .items }}
+    <li class="im-philosophy__item">
+      <svg class="im-philosophy__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        {{- if eq .icon "understand" }}
+        <path d="m24 5 16 9-16 9-16-9Z"/>
+        <path d="m8 24 16 9 16-9M8 34l16 9 16-9M24 23v10"/>
+        {{- else if eq .icon "create" }}
+        <rect x="7" y="12" width="30" height="29" rx="3"/>
+        <path d="m18 29 2-8L34 7a3.5 3.5 0 0 1 5 5L25 26Zm12-18 5 5M18 29l7-3M14 35h16"/>
+        {{- else if eq .icon "ai" }}
+        <path d="M27 32H16l-9 7V11a4 4 0 0 1 4-4h26a4 4 0 0 1 4 4v12M15 16h18M15 23h10"/>
+        <circle cx="35" cy="35" r="9"/>
+        <path d="m31 35 3 3 5-6"/>
+        {{- end }}
+      </svg>
+      <p class="im-philosophy__subtitle">{{ .subtitle }}</p>
+      <p class="im-philosophy__description">{{ .description }}</p>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
 
 {{- with .Params.entries }}
-<nav class="im-index" aria-label="網站導覽">
+<nav class="im-index" aria-label="社群與學習資源">
   <ol>
     {{- range $i, $e := . }}
     <li>
@@ -41,7 +70,6 @@
   </ol>
 </nav>
 {{- end }}
-</div>
 
 {{- $posts := first 5 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
 {{- with $posts }}
