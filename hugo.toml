@@ -68,14 +68,19 @@ pageRef = '/community'
 weight = 20
 
 [[menus.main]]
-name = '標籤'
-pageRef = '/tags'
+name = '關於'
+pageRef = '/about'
 weight = 30
 
 [[menus.main]]
 name = '搜尋'
 pageRef = '/search'
 weight = 40
+
+[[menus.footer]]
+name = '關於我們'
+pageRef = '/about'
+weight = 10
 
 [markup.highlight]
 style = 'algol'

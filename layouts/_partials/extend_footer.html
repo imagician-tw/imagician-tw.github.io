@@ -1,8 +1,12 @@
 {{- if not (.Param "hideFooter") }}
 {{- $links := where site.Params.communityLinks "url" "ne" "" }}
-{{- with $links }}
-<nav class="im-community-links" aria-label="社群與活動">
-  {{- range . }}
+{{- $footerMenu := site.Menus.footer }}
+{{- if or $links $footerMenu }}
+<nav class="im-community-links" aria-label="網站與社群">
+  {{- range $footerMenu }}
+  <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+  {{- end }}
+  {{- range $links }}
   <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
     {{- with .icon }}<span aria-hidden="true">{{ partial "svg.html" (dict "name" .) }}</span>{{ end }}
     <span>{{ .name }}</span>

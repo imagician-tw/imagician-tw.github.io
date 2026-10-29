@@ -10,14 +10,15 @@
 
 - `content/_index.md`：首頁文案（標語、三項教學理念、社群與學習資源入口）。
 - `content/posts/`：文章。
-- `content/community/`：imagician Taiwan 社群頁面；舊網址 `/about/`、`/meetup/`、`/resources/` 以 `aliases` 轉到這裡。
+- `content/about.md`：品牌「關於我們」頁，正式網址為 `/about/`；舊網址 `/community/about/` 以 `aliases` 轉到這裡。
+- `content/community/`：imagician Taiwan 社群頁面；舊網址 `/meetup/`、`/resources/` 以 `aliases` 轉到這裡。
 - `layouts/home.html`：首頁版型（含圓線動畫）。
-- `assets/css/extended/imagician.css`：配色、襯線標題與首頁樣式；列表在 hover／鍵盤聚焦時維持位置不動，保留連結變色。
+- `assets/css/extended/imagician.css`：配色、襯線品牌字樣、黑體內容與首頁樣式；列表在 hover／鍵盤聚焦時維持位置不動，保留連結變色。
 - `static/images/og-image.png`：Facebook／X 分享卡片共用縮圖（1200×630）。
 
 ## 首頁教學理念
 
-首頁主視覺在「懂得如何想像，就能學會施展魔法」下方呈現兩句理念引言，與標語相隔 1.25rem；引言字級為原設定減少 4px（桌機 18.8px、手機 11.2px）。三組圖示、短句與說明獨立呈現於主視覺下方，不另設「教學理念」標籤或三項中標。文字維護於 `content/_index.md` 的 `philosophy.intro` 與 `philosophy.items`；線條圖示由 `layouts/home.html` 繪製，僅作裝飾，不作為連結。
+首頁主視覺在「懂得如何想像，就能學會施展魔法」下方呈現兩句理念引言，與標語相隔 1.25rem；引言統一使用 14px，避免手機文字過小。三組圖示、短句與說明獨立呈現於主視覺下方，不另設「教學理念」標籤或三項中標。文字維護於 `content/_index.md` 的 `philosophy.intro` 與 `philosophy.items`；線條圖示由 `layouts/home.html` 繪製，僅作裝飾，不作為連結。
 
 三項圖示依序為創作紙筆、放大鏡搭配程式符號 `</>`、對話框搭配勾選記號，分別對應動手實作、理解原理，以及需求溝通與安全確認。
 
@@ -27,9 +28,20 @@
 
 ## 字級
 
-桌機版（視窗寬度 ≥ 601px）一般字級統一放大 50%（原始大小的 1.5 倍），手機版（≤ 600px）維持原大小。縮放設定集中在 `assets/css/extended/imagician.css` 的桌機字級區塊，由 `--im-font-scale: 1.5` 控制；僅調整字級，不縮放頁面或間距。首頁英文標題在桌機縮放後再乘以 8/9，最大字級由 144px 收至 128px；中文品牌字級不變，桌機行高收至 1.25。英文標題可超出內文欄寬並保持置中，避免拆字換行。
+內文與標題使用系統黑體，分別設定閱讀字級，不再套用整站 1.5 倍縮放。內容標題字重為 500，內文為 400、行高 1.8（20px 內文對應 36px 行高）。設定集中於 `assets/css/extended/imagician.css` 的 `--im-body-size`、`--im-page-title-size`、`--im-section-title-size`、`--im-card-title-size`。
 
-PaperMod 的固定字級在此覆寫，不直接修改 theme submodule。新增 `px`、`rem` 或 `clamp()` 字級時，需同步加入桌機縮放規則；`em` 字級會隨父層放大，不需重複套用倍率。
+| 類型 | 桌機（≥ 601px） | 手機（≤ 600px） |
+| --- | --- | --- |
+| 一般內文 | 20px | 20px |
+| 頁面大標 | 36px | 28px |
+| 內文二級標題 | 28px | 24px |
+| 卡片小標 | 20px | 18px |
+
+卡片說明使用 16px，首頁引言與頁尾連結使用 14px。首頁 `imagician`、`創想符碼` 與導覽列品牌名稱保留原本襯線字體、字級與字重；英文主標桌機最大 128px，中文品牌桌機行高為 1.25。程式碼仍使用等寬字體。
+
+長文頁的段落、清單與表格以 `--content-gap: 1.5rem` 保留 24px 段距。二級標題上方留 48px、下方留 16px，讓標題靠近所屬內容；三級以下標題上方 32px、下方 12px。品牌、卡片與導覽字級不隨一般內文一起放大，閱讀欄寬維持原設定。
+
+PaperMod 的內容標題在此覆寫，不直接修改 theme submodule。新增內容樣式時優先使用上述語意字級變數，不恢復整站倍率；品牌字樣的大小獨立維護。
 
 ## 分享卡片
 
@@ -37,6 +49,7 @@ PaperMod 的固定字級在此覆寫，不直接修改 theme submodule。新增 
 
 ## 社群連結與分享
 
+- `hugo.toml` 的 `menus.main` 提供「文章／社群／關於／搜尋」；「關於」取代原本的「標籤」入口，但標籤頁仍保留。`menus.footer` 提供站內的「關於我們」連結，與下列外部社群連結並列，使用同一分頁開啟。
 - `hugo.toml` 的 `params.communityLinks` 共用於全站頁尾與首頁社群區塊；Facebook、Luma 已設定，X 暫留空。`url` 留空時不顯示，補上網址後即會出現在頁尾。設定 `action` 的項目也會顯示於首頁，搭配平台名稱呈現「Facebook 動態／Luma 活動資訊」。
 - `content/_index.md` 的社群入口以 `community: true` 啟用三行無按鈕外框的「圖示＋文字＋箭頭」連結，依序為 Facebook 動態、Luma 活動資訊、了解社群運作。桌機與手機皆垂直排列；頁尾仍保留原有連結。Luma 使用活動日曆圖示，非平台商標；社群介紹使用人物圖示。
 - 文章頁使用 Facebook／X 的文字分享連結；社群、學習資源等一般頁面不顯示分享列。Luma 是活動頁連結，不作為文章分享按鈕。
