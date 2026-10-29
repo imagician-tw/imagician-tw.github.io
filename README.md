@@ -37,7 +37,8 @@ PaperMod 的固定字級在此覆寫，不直接修改 theme submodule。新增 
 
 ## 社群連結與分享
 
-- `hugo.toml` 的 `params.communityLinks` 控制全站頁尾連結；Facebook、Luma 已設定，X 暫留空。`url` 留空時不顯示，補上網址後即會出現，不需要修改版型。
+- `hugo.toml` 的 `params.communityLinks` 共用於全站頁尾與首頁社群區塊；Facebook、Luma 已設定，X 暫留空。`url` 留空時不顯示，補上網址後即會出現在頁尾。設定 `action` 的項目也會顯示於首頁，搭配平台名稱呈現「Facebook 動態／Luma 活動資訊」。
+- `content/_index.md` 的社群入口以 `community: true` 啟用三行無按鈕外框的「圖示＋文字＋箭頭」連結，依序為 Facebook 動態、Luma 活動資訊、了解社群運作。桌機與手機皆垂直排列；頁尾仍保留原有連結。Luma 使用活動日曆圖示，非平台商標；社群介紹使用人物圖示。
 - 文章頁使用 Facebook／X 的文字分享連結；社群、學習資源等一般頁面不顯示分享列。Luma 是活動頁連結，不作為文章分享按鈕。
 - 學習資源維護於 `content/community/resources.md`。現有兩篇 2025 鐵人賽文章已移除，未設定轉址；舊文章網址會回傳 404，原始內容仍可從 Git 歷史取回。
 

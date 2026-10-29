@@ -59,7 +59,42 @@
   <ol>
     {{- range $i, $e := . }}
     <li>
-      <a href="{{ $e.url | relLangURL }}">
+      {{- if $e.community }}
+      <div class="im-index__card im-index__community">
+        <span class="im-index__num">{{ printf "%02d" (add $i 1) }}</span>
+        <div class="im-index__text">
+          <h2 class="im-index__title">{{ $e.title }}</h2>
+          <p class="im-index__desc">{{ $e.description }}</p>
+        </div>
+        <div class="im-index__actions">
+          {{- range where site.Params.communityLinks "url" "ne" "" }}
+          {{- if .action }}
+          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+            {{- with .icon }}
+            <span aria-hidden="true">{{ partial "svg.html" (dict "name" .) }}</span>
+            {{- else }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="3" y="5" width="18" height="16" rx="2"/>
+              <path d="M16 3v4M8 3v4M3 11h18"/>
+            </svg>
+            {{- end }}
+            <span>{{ .name }} {{ .action }}</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          {{- end }}
+          {{- end }}
+          <a href="{{ $e.url | relLangURL }}">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <circle cx="9" cy="8" r="3"/>
+              <path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6M21 21v-3a6 6 0 0 0-3-5.2"/>
+            </svg>
+            <span>了解社群運作</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+      {{- else }}
+      <a class="im-index__card" href="{{ $e.url | relLangURL }}">
         <span class="im-index__num">{{ printf "%02d" (add $i 1) }}</span>
         <span class="im-index__text">
           <span class="im-index__title">{{ $e.title }}</span>
@@ -67,6 +102,7 @@
         </span>
         <span class="im-index__arrow" aria-hidden="true">→</span>
       </a>
+      {{- end }}
     </li>
     {{- end }}
   </ol>

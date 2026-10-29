@@ -22,6 +22,7 @@ entries:
   - title: "社群與交流"
     description: "實體小聚暫停中；從社群頁了解近況與參與方式。"
     url: "/community/"
+    community: true
   - title: "先自己學看看"
     description: "從精選學習資源開始，探索程式與 AI 的世界。"
     url: "/community/resources/"

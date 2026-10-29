@@ -33,6 +33,7 @@ ShowShareButtons = true
 name = 'Facebook'
 icon = 'facebook'
 url = 'https://www.facebook.com/imagiciantw'
+action = '動態'
 
 [[params.communityLinks]]
 name = 'X'
@@ -42,6 +43,7 @@ url = ''
 [[params.communityLinks]]
 name = 'Luma'
 url = 'https://lu.ma/imagiciantw'
+action = '活動資訊'
 
 
 [params.label]
